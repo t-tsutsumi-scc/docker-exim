@@ -22,8 +22,12 @@ services:
     volumes:
       - PATH_TO_CONF:/etc/exim4/exim4.conf.localmacros:ro
       - PATH_TO_CONF:/etc/exim4/update-exim4.conf.conf:ro
+      - smtp-spool:/var/spool/exim4
     environment:
       TZ: UTC
+
+volumes:
+  smtp-spool:
 ```
 
 ```
